@@ -25,7 +25,31 @@
     *{box-sizing:border-box}
     html,body{margin:0; font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,'Helvetica Neue',Arial; color:var(--muted); background:var(--bg)}
     img{max-width:100%; display:block}
-    a{color:inherit; text-decoration:none}
+    a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        position: relative;
+    }
+
+    a:hover {
+        color: #21408f;
+    }
+
+    a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 1px;
+        bottom: -2px;
+        left: 0;
+        background-color: #21408f;
+        transition: width 0.3s ease;
+    }
+
+    a:hover::after {
+        width: 100%;
+    }
 
     .page{max-width:1100px; margin:24px auto; padding:0 16px}
     .grid{display:grid; grid-template-columns:320px 1fr; gap:22px}
@@ -102,7 +126,7 @@
             <img class="avatar" src="Avatar.jpeg" alt="Oleh Lobko" />
             <div>
               <div class="name">Oleh Lobko</div>
-              <div style="opacity:.85">Front‑End / Back-End / Full‑Stack Developer</div>
+              <div style="opacity:.85">Front‑End / Back-End / Full‑Stack Developer/ WP-Developer</div>
             </div>
           </div>
         </div>
@@ -146,11 +170,20 @@
             <span class="chip">HTML & CSS (SASS/SCSS)</span>
             <span class="chip">MongoDB</span>
             <span class="chip">MySQL</span>
+            <span class="chip">MariaDB</span>
             <span class="chip">PostgreSql</span>
             <span class="chip">Supabase</span>
+            <span class="chip">PHP</span>
             <span class="chip">Git</span>
             <span class="chip">Postman</span>
             <span class="chip">Figma</span>
+              <span class="chip">Elementor</span>
+              <span class="chip">Woocommerce</span>
+              <span class="chip">ACF</span>
+              <span class="chip">Elementor</span>
+              <span class="chip">Bootstrap</span>
+              <span class="chip">Jquery</span>
+              <span class="chip">Gutenberg</span>
           </div>
         </div>
 
@@ -194,91 +227,136 @@
 
       <!-- Main content -->
       <main class="content">
-        <!-- Education -->
-        <section class="card">
-          <h2 class="section">Education</h2>
-          <div class="hr"></div>
+          <section class="card">
+              <h2 class="section">Education</h2>
+              <div class="hr"></div>
 
-          <div class="edu-item">
-            <div class="edu-top">
-              <div>National Technical University of Ukraine — <strong>Kyiv Polytechnic Institute</strong></div>
-              <div class="time">2023 — 2027</div>
-            </div>
-            <div class="edu-meta">Bachelor of Information Systems and Technologies • Top of the course for 3 semesters</div>
-          </div>
+              <div class="edu-item">
+                  <div class="edu-top">
+                      <div><strong>IT - Udemy Internship</strong> — Udemy</div>
+                      <div class="time">2024 — 2025</div>
+                  </div>
+                  <div class="edu-meta">Kyiv, Ukraine • Intensive practical training in Web Development and Full-Stack technologies</div>
+              </div>
 
-          <div class="edu-item">
-            <div class="edu-top">
-              <div>School — NVP №32, Poltava</div>
-              <div class="time">2012 — 2023</div>
-            </div>
-            <div class="edu-meta">In‑depth study of mathematical sciences and programming</div>
-          </div>
-        </section>
+              <div class="edu-item">
+                  <div class="edu-top">
+                      <div>National Technical University of Ukraine — <strong>'Kyiv Polytechnic Institute'</strong></div>
+                      <div class="time">2023 — 2027</div>
+                  </div>
+                  <div class="edu-meta">Bachelor's Degree in Informational System and Technologies • Kyiv, Ukraine</div>
+              </div>
+
+              <div class="edu-item">
+                  <div class="edu-top">
+                      <div>School — <strong>NVP №32</strong>, Poltava</div>
+                      <div class="time">2012 — 2023</div>
+                  </div>
+                  <div class="edu-meta">In‑depth study of mathematical sciences and programming • Poltava, Ukraine</div>
+              </div>
+          </section>
 
         <!-- Experience -->
-        <section class="card">
-          <h2 class="section">Experience</h2>
-          <div class="hr"></div>
+          <section class="card">
+              <h2 class="section">Experience</h2>
+              <div class="hr"></div>
 
-          <article class="exp-item">
-            <div class="exp-head">
-              <div>
-                <div class="role">Full‑Stack Developer — FictAdvisor</div>
-                <div class="place">Kyiv</div>
-              </div>
-              <div class="time">2023 — 2025</div>
-            </div>
-            <ul class="bullets">
-              <li><strong>User Interface Development:</strong> built responsive and accessible UI using HTML, CSS (SASS/SCSS), and React.js.</li>
-              <li><strong>Performance Optimization:</strong> improved load time via best practices and asset optimization.</li>
-              <li><strong>Cross‑functional Collaboration:</strong> worked with back‑end developers and designers to align features with business goals.</li>
-              <li><strong>Best Practices:</strong> maintained clean and scalable codebase.</li>
-              <li><strong>Testing & Debugging:</strong> ensured compatibility across devices and browsers.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">PostrgreSql</span>
-              <span class="tag">SCSS</span>
-              <span class="tag">Nose.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">Accessibility</span>
-              <span class="tag">Performance</span>
-            </div>
-          </article>
+              <article class="exp-item">
+                  <div class="exp-head">
+                      <div>
+                          <div class="role">WP Developer — WLA (White Label Agency)</div>
+                          <div class="place">Poltava, UA</div>
+                      </div>
+                      <div class="time">Jul 2025 — Feb 2026</div>
+                  </div>
+                  <ul class="bullets">
+                      <li><strong>Custom Development:</strong> Engineered high-performance WordPress websites utilizing PHP and MariaDB.</li>
+                      <li><strong>Advanced Page Building:</strong> Built complex, responsive layouts using Elementor, ACF, and Gutenberg.</li>
+                      <li><strong>E-commerce:</strong> Built and customized online stores using WooCommerce and bespoke features.</li>
+                      <li><strong>Modern Frontend:</strong> Integrated React components within the WordPress ecosystem for interactive interfaces.</li>
+                      <li><strong>Collaboration:</strong> Collaborated with international teams to deliver white-label solutions.</li>
+                  </ul>
+                  <div class="tags">
+                      <span class="tag">WordPress</span>
+                      <span class="tag">PHP</span>
+                      <span class="tag">Elementor</span>
+                      <span class="tag">WooCommerce</span>
+                      <span class="tag">React</span>
+                      <span class="tag">SCSS</span>
+                      <span class="tag">ACF</span>
+                  </div>
+              </article>
+              <article class="exp-item">
+                  <div class="exp-head">
+                      <div>
+                          <div class="role">International GIZ Internship — GIZ</div>
+                          <div class="place">Kyiv, UA, Ukraine</div>
+                      </div>
+                      <div class="time">Apr 2025 — Jul 2025</div>
+                  </div>
+                  <ul class="bullets">
+                      <li><strong>Database Architecture:</strong> Designed and implemented a robust relational database to streamline internal data management and ensure data integrity.</li>
+                      <li><strong>System Development:</strong> Developed a web-based management system (CRUD application) to provide a user-friendly interface for interacting with the database.</li>
+                      <li><strong>Process Optimization:</strong> Automated manual data entry workflows, reducing processing time and minimizing human error.</li>
+                      <li><strong>Collaboration:</strong> Worked within an international team to gather requirements and translate business needs into technical specifications.</li>
+                  </ul>
+                  <div class="tags">
+                      <span class="tag">Database Design</span>
+                      <span class="tag">CRUD</span>
+                      <span class="tag">Process Automation</span>
+                      <span class="tag">SQL</span>
+                      <span class="tag">Internal Systems</span>
+                  </div>
+              </article>
+              <article class="exp-item">
+                  <div class="exp-head">
+                      <div>
+                          <div class="role">Full‑Stack Developer — FictAdvisor</div>
+                          <div class="place">Kyiv, UA</div>
+                      </div>
+                      <div class="time">Sep 2024 — Apr 2025</div>
+                  </div>
+                  <ul class="bullets">
+                      <li><strong>UI Development:</strong> Built responsive and accessible UI using HTML, CSS (SASS/SCSS), and React.js.</li>
+                      <li><strong>Performance:</strong> Ensured fast page loading and high performance by implementing efficient coding practices.</li>
+                      <li><strong>Database Management:</strong> Created and maintained databases using MongoDB, PostgreSQL, and MariaDB.</li>
+                      <li><strong>Testing:</strong> Conducted thorough testing and debugging to ensure reliability across various devices.</li>
+                  </ul>
+                  <div class="tags">
+                      <span class="tag">React</span>
+                      <span class="tag">PostgreSql</span>
+                      <span class="tag">SCSS</span>
+                      <span class="tag">Node.js</span>
+                      <span class="tag">Express</span>
+                      <span class="tag">MongoDB</span>
+                  </div>
+              </article>
+          </section>
 
-          <article class="exp-item">
-            <div class="exp-head">
-              <div>
-                <div class="role">Udemy International — Internship</div>
-                <div class="place">Kyiv</div>
-              </div>
-              <div class="time">2023 — 2025</div>
-            </div>
-            <ul class="bullets">
-              <li>Created and curated educational content with a focus on web development and programming.</li>
-              <li>Delivered numerous hands‑on projects applying knowledge to real‑world tasks.</li>
-              <li>Gained experience with React, Node.js, Express, and MongoDB, collaborating with international peers.</li>
-              <li>Built strong self‑discipline, adaptability, and problem‑solving through continuous evaluation.</li>
-            </ul>
-            <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">Node.js</span>
-              <span class="tag">Express</span>
-              <span class="tag">MongoDB</span>
-              <span class="tag">Git</span>
-              <span class="tag">Supabase</span>
-            </div>
-          </article>
-        </section>
 
+          <section class="card">
+              <h2 class="section">Projects & Portfolio</h2>
+              <div class="hr"></div>
+              <p>Explore my commercial and non-commercial projects, including React applications and custom WordPress solutions:</p>
 
-        <section class="card">
-          <h2 class="section">Projects & Portfolio</h2>
-          <div class="hr"></div>
-          <p>See my non‑commercial projects across React, Node/Express, and MongoDB in my portfolio:</p>
-          <p><a href="#" id="portfolioLink">github.com/oleh‑lobko</a></p>
-        </section>
+              <ul class="bullets">
+                  <li>
+                      <strong>Wilmington:</strong>
+                      <a href="http://ready-for-feedback3.com/internship/lobko/wilmington/" target="_blank">View Project</a>
+                  </li>
+                  <li>
+                      <strong>IMK:</strong>
+                      <a href="http://ready-for-feedback3.com/internship/lobko/imk/" target="_blank">View Project</a>
+                  </li>
+                  <li>
+                      <strong>Cheers:</strong>
+                      <a href="http://ready-for-feedback3.com/internship/lobko/cheers/" target="_blank">View Project</a>
+                  </li>
+              </ul>
+
+              <p>Full source code and more examples available at:</p>
+              <p><a href="https://github.com/oleh-lobko" id="portfolioLink" target="_blank">github.com/oleh-lobko</a></p>
+          </section>
       </main>
     </div>
   </div>
